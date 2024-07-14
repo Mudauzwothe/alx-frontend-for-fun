@@ -1,0 +1,30 @@
+/* 1-styles.css */
+
+h2 {
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Position the underline just below the text */
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #000; /* Color of the underline */
+  transition: width 0.3s ease-in-out; /* Transition effect for the underline */
+}
+
+a:hover::after {
+  width: 100%; /* Full width on hover */
+}
+

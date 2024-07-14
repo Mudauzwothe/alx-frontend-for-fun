@@ -1,0 +1,85 @@
+/* 3-styles.css */
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+.menu-open {
+  display: none;
+}
+
+.menu-open-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #ff6347;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-line {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 3px 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff6347;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.menu-item:nth-child(3) { transform: translate(0, -90px); }
+.menu-item:nth-child(4) { transform: translate(63px, -63px); }
+.menu-item:nth-child(5) { transform: translate(90px, 0); }
+.menu-item:nth-child(6) { transform: translate(63px, 63px); }
+.menu-item:nth-child(7) { transform: translate(0, 90px); }
+
+.menu-open:checked + .menu-open-button {
+  transform: rotate(45deg);
+}
+
+.menu-open:checked + .menu-open-button .menu-line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-open:checked + .menu-open-button .menu-line-2 {
+  opacity: 0;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-open:checked ~ .menu-item {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+

@@ -1,0 +1,36 @@
+/* 0-styles.css */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 20px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;  /* Width of each icon */
+  height: 32px; /* Height of each icon */
+  background-image: url('0-sprite.png');
+  background-repeat: no-repeat;
+}
+
+/* Specific positions for each icon */
+.i-html {
+  background-position: 0 0; /* Adjust based on the position of the HTML icon in the sprite */
+}
+
+.i-css {
+  background-position: -32px 0; /* Adjust based on the position of the CSS icon in the sprite */
+}
+
+.i-js {
+  background-position: -64px 0; /* Adjust based on the position of the JavaScript icon in the sprite */
+}
+
